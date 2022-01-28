@@ -35,4 +35,11 @@ public class AccountTest {
         account.deposit(-20);
         assertThat(account.balance()).isEqualTo(-10);
     }
+
+    @Test
+    public void anAccount_putInPennies() {
+        Account account = Account.emptyAccount();
+        account.deposit(10.10);
+        assertThat(account.balance()).isEqualTo(10.10);
+    }
 }
