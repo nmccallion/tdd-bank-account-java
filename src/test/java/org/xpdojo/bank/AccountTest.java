@@ -28,4 +28,12 @@ public class AccountTest {
         account.deposit(20);
         assertThat(account.balance()).isEqualTo(30);
     }
+
+    @Test
+    public void anAccount_putInMinusStuffGoingPastZero() {
+        Account account = new Account();
+        account.deposit(10);
+        account.deposit(-20);
+        assertThat(account.balance()).isEqualTo(-10);
+    }
 }
