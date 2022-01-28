@@ -4,6 +4,14 @@ public class Account {
 
     private int balance;
 
+    public static Account emptyAccount() {
+        return new Account();
+    }
+
+    private Account() {
+        //intentionally left blank
+    }
+
     public int balance() {
         return balance;
     }
