@@ -19,4 +19,12 @@ public class Account {
     public void deposit(double i) {
         balance += i;
     }
+
+    public void withdraw(double v)  throws AccountException {
+        if (balance >= v) {
+            balance -= v;
+        } else {
+            throw new AccountException("Not enough dough");
+        }
+    }
 }
